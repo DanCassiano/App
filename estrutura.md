@@ -17,16 +17,18 @@
 
 index.php 
 	|
-	|-- config.php
-			|
-			| -- d=> url base
-			| -- d=> dir base
-			| -- d=> dir tema
-			| -- d=> dir assets
-			| -- d=> dir upload
-			|
-			| -- d=> HOST
-			| -- d=> BANCO
-			| -- d=> SENHA
-			|
-			| -- d=> DEBUG
+	|-> config.php
+	|		|
+	|		| -> d=> url base
+	|		| -> d=> dir base
+	|		| -> d=> dir tema
+	|		| -> d=> dir assets
+	|		| -> d=> dir upload
+	|		|
+	|		| -> d=> HOST
+	|		| -> d=> BANCO
+	|		| -> d=> SENHA
+	|		|
+	|		| -> d=> DEBUG
+	|
+	| -> load.php => instacia das classes
