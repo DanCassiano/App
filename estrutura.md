@@ -15,20 +15,25 @@
 		|-> .htaccess
 
 
-index.php 
-	|
+#### index.php 
+
 	|-> config.php
-	|		|
-	|		| -> d=> url base
-	|		| -> d=> dir base
-	|		| -> d=> dir tema
-	|		| -> d=> dir assets
-	|		| -> d=> dir upload
-	|		|
-	|		| -> d=> HOST
-	|		| -> d=> BANCO
-	|		| -> d=> SENHA
-	|		|
-	|		| -> d=> DEBUG
+			|
+			|-> d=> url base
+			|-> d=> dir base
+			|-> d=> dir tema
+			|-> d=> dir assets
+			|-> d=> dir upload
+			|
+			|-> d=> HOST
+			|-> d=> BANCO
+			|-> d=> SENHA
+			|
+			|-> d=> DEBUG
+	
+	|-> load.php => instacia das classes
+
+### core 
+	|-> |class|
 	|
-	| -> load.php => instacia das classes
+	|-> app.init.php
