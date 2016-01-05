@@ -1,4 +1,6 @@
 <?php 
+	namespace Core;
+
 	class Url
 	{
 		private static $url = null;
