@@ -13,7 +13,8 @@
 		protected $controller    = self::DEFAULT_CONTROLLER;
 		protected $action        = self::DEFAULT_ACTION;
 		protected $params        = array();
-		protected $basePath      = DIR_BASE;
+		protected $query 		= array();
+		protected $basePath      = 'app/';
 
 		public function __construct(array $options = array()) {
 			
@@ -38,13 +39,16 @@
 	protected function parseUri() {
 
 		$path = trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
-		$path = preg_replace('/[^a-zA-Z0-9]/', "", $path);
-		
+
 		if (strpos($path, $this->basePath) === 0) {
-			$path = substr($path, strlen($this->basePath));
+			$path = substr($path, strlen($this->basePath)) ;
 		}
 
+		$t = str_replace('-', " ", $path );
+		$path = str_replace(" ", "", ucwords( $t ) );
+		
 		@list($controller, $action, $params) = explode("/", $path, 3);
+		
 		if (isset($controller)) {
 			$this->setController($controller);
 		}
@@ -56,12 +60,20 @@
 		if (isset($params)) {
 			$this->setParams(explode("/", $params));
 		}
+
+		$query = trim(parse_url( $_SERVER["REQUEST_URI"], PHP_URL_QUERY));
+
+		if( isset($query)) {
+			parse_str( $query, $query );
+			$this->setQuery( $query );
+		}
+
 	}
 
 	public function setController($controller) {
 		
-		echo $controller;
-		$controller = "Core\\Controller\\".ucfirst(strtolower($controller)) . "Controller";
+		
+		$controller = "Core\\Controller\\".ucfirst($controller) . "Controller";
 		
 		if (!class_exists($controller)) {
 			throw new \InvalidArgumentException("Classe '$controller' não foi encontrada.");
@@ -71,10 +83,6 @@
 	}
 
 	public function setAction($action) {
-		$reflector = new ReflectionClass($this->controller);
-		if (!$reflector->hasMethod($action)) {
-			throw new \InvalidArgumentException("O '$action' não foi definido");
-		}
 		$this->action = $action;
 		return $this;
 	}
@@ -88,8 +96,13 @@
 		return $this;
 	}
 
+	public function setQuery( array $query ) {
+		$this->query = $query;
+		return $this;
+	}
+
 	public function run() {
-		call_user_func_array(array(new $this->controller, $this->action), $this->params);
+		call_user_func_array(array(new $this->controller, 'render' ), array($this->action, $this->params, $this->query ));
 	}
 
 }

@@ -11,7 +11,7 @@
 			
 		}
 
-		public function index(){
+		public function render(){
 			echo "Olasd";
 		}
 	}
