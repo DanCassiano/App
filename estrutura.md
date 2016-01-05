@@ -19,17 +19,17 @@
 
 	|-> config.php
 			|
-			|-> d=> url base
-			|-> d=> dir base
-			|-> d=> dir tema
-			|-> d=> dir assets
-			|-> d=> dir upload
+			|-> [X] d=> url base 
+			|-> [X] d=> dir base
+			|-> [X] d=> dir tema
+			|-> [X] d=> dir assets
+			|-> [X] d=> dir upload
 			|
-			|-> d=> HOST
-			|-> d=> BANCO
-			|-> d=> SENHA
+			|-> [x] d=> HOST
+			|-> [x] d=> BANCO
+			|-> [x] d=> SENHA
 			|
-			|-> d=> DEBUG
+			|-> [x] d=> DEBUG
 	
 	|-> load.php => instacia das classes
 
