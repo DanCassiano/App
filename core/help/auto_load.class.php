@@ -1,6 +1,6 @@
 <?php 
 	
-	namespace Core;
+	namespace Core\Help;
 	/**
 	* AutoLoad
 	* @autor Jordan de Sousa Cassiano
