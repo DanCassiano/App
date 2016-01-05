@@ -4,6 +4,6 @@ RewriteBase /app/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule .  /app/index.php [L]
+RewriteRule ^(.*)$  index.php [L]
 
 </IfModule>
