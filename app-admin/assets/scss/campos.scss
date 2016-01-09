@@ -1,0 +1,117 @@
+/*Campos*/
+
+input:not([type=checkbox]) {
+	padding: 5px 10px;
+	border:1px solid rgba(0,0,0,.2);
+	width: 100%;
+	position: relative;
+	
+	
+}
+
+input:hover {
+	border:1px solid rgba(0,0,0,.4);
+}
+
+input[type=checkbox], 
+input[type=radio]{
+	padding-left: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-right: 10px;
+	margin-left: 50px;
+
+	border: 1px solid #b4b9be;
+	background: #fff;
+	color: #000;
+	clear: none;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 0;
+	height: 16px;
+	margin: -4px 4px 0 0;
+	outline: 0;
+	padding: 0!important;
+	text-align: center;
+	vertical-align: middle;
+	width: 16px;
+	min-width: 16px;
+	
+}
+
+.corpo input[type=checkbox]:first-child {
+	margin-left: 0;
+}
+
+label {
+	
+	margin-left: 0;
+	float: left;
+}
+
+
+button,
+input[type=button],
+.btn {
+	padding: 4px 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,.1);
+	cursor: pointer;
+	text-decoration: none;
+	height: 30px;
+}
+
+.btn {
+	margin: 0;
+	color: #000;
+
+	&.btn-padrao {
+		background-color: #5584FF;
+		color:#fff;
+	}
+
+	&.btn-sucesso {
+		background-color: #449D44;
+		color:#fff;
+	}
+
+	&.btn-erro {
+		background-color: red;
+	}
+
+	&.btn-link {
+		border:none;
+
+		.fa {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	&.btn-medio {
+
+		.fa {
+			font-size: 2em;
+		}
+	}
+
+	.fa {
+		margin-right:10px;
+	}
+}
+
+
+.selecionado {
+	background-color:#000 !important;
+	color:#fff;
+}
+.selecionado .fa {
+	color: #fff;
+	font-size: 1.8em;
+}
+/*Campos*/

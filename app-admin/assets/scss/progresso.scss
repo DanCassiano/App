@@ -1,0 +1,18 @@
+/*Progress Bar*/
+.progress-bar {
+	width: 100%;
+	height: 15px;
+	border: 1px solid rgba(0,0,0,.1);
+	position: relative;
+ 	
+ 	.barra {
+		display: inline-block;
+		background-color: rgba(0,0,0,.1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0px;
+	}
+}
+
+/*Progress Bar*/

@@ -1,0 +1,73 @@
+
+/*Animacao*/
+
+.anim-input, 
+.anim-input:hover {
+	-webkit-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	transition: all .1s linear;
+}
+/*Animacao*/
+
+/*Help*/
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.display-none {
+	display: none;
+}
+
+/*Help*/
+
+.login {
+	width: 320px;
+	margin: 0 auto;
+}
+
+.rocket {
+	width: 128px;
+	margin: 0 auto;
+}
+
+.rocket.login {
+	margin-top: 10%;
+	margin-bottom: 20px;
+}
+
+
+.controle {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-right: 5px;
+	margin-left: 5px;
+	vertical-align: middle;
+
+	&.left {
+		float: left;
+	}
+
+	&.right {
+		float: right;
+	}
+}

@@ -1,0 +1,96 @@
+
+/* Table Base */
+
+table {
+	font-family: arial;
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table { 
+	width: 100%;
+	margin-bottom: 20px;
+
+	th,
+	td {
+		font-weight: normal;
+		font-size: 12px;
+		padding: 8px 15px;
+		line-height: 20px;
+		text-align: left;
+		vertical-align: middle;
+		border-top: 1px solid #dddddd;
+	}
+	
+	thead th {
+		background: #eeeeee;
+		vertical-align: bottom;
+	}
+
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background-color: #fafafa;
+	}
+
+	.t-small {
+		width: 5%;
+	}
+	
+	.t-medium {
+		width: 15%;
+	}
+	
+	.t-status {
+		font-weight: bold;
+	}
+	
+	.t-active {
+		color: $active;
+	}
+
+	.t-inactive {
+		color:$inactive;
+	}
+
+	.t-draft {
+		color: $draft;
+	}
+
+	.t-scheduled {
+		color: $scheduled;
+	}
+
+	.controles * {
+		padding: 4px 7px;
+		color: #000;
+		text-decoration: none;
+		display:inline-block;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+/* Small Sizes */
+@media (max-width: 480px) { 
+	
+	.table-action {
+		thead {
+			display: none;
+		}
+		
+		tr {
+			border-bottom: 1px solid #dddddd;
+		}
+		td {
+			border: 0;
+		}
+
+		td:not(:first-child) {
+			display: block;
+		}
+	}
+}

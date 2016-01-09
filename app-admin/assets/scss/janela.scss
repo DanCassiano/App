@@ -1,0 +1,42 @@
+
+/*Janelas*/
+
+.janela {
+	position: relative;
+	background-color: #fff;
+	border-radius: 1px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+	@include border-radius();
+	header,
+	header.titulo {
+		background-color: $backgroudColorTitulo;
+		width: 100%;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		/*border-bottom: 1px solid rgba( 246, 246, 251, .7);*/
+		border-bottom: 1px solid #e0e0e0;
+		display: inline-block;
+		line-height: 24px;
+		text-align: left;
+		position: relative;
+		@include border-top-radios();
+		height: 38px;
+	}
+	
+	.corpo,
+	.rodape {
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box;	
+		display: inline-block;
+		line-height: 24px;
+		position:relative;
+	}
+	
+	.rodape {
+		border-top: 1px solid #e0e0e0;
+		text-align: left;
+	}
+}
+
+/*Janelas*/

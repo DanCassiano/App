@@ -1,0 +1,60 @@
+/*Select*/
+.select {
+
+	display: inline-block;
+	border:1px solid #c6c6c6;
+	background: #f0f0f0;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+	padding: 2px 16px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	// margin-top: 5px;
+	position: relative;
+	text-align: left !important;
+	
+	a {
+		color: #000;
+		text-decoration: none;
+		text-align: left !important;
+	}
+
+	.fa {
+		
+		position: absolute;
+		right: 5px;
+		font-size: 1.2em;
+		margin-top: 5px;
+	}
+	
+	.select-lista {
+		display: none;
+		position: absolute;
+		left: 0;
+		border:1px solid #c6c6c6;
+		background: #fff;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+		text-align: left !important;
+		z-index: 999999;
+	
+		li {
+			border-left: 0;
+			border-right: 0;
+			padding:1px 15px 3px 15px;
+			list-style: none;
+			white-space: nowrap;
+
+			&.select {
+				background: #f0f0f0;
+			}
+		}
+
+		li:hover {
+			background: #f0f0f0;
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+}

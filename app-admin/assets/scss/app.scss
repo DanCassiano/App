@@ -1,0 +1,87 @@
+
+$corPrimaria: #fff;
+
+$sombraPadrao: 0 2px 2px 0 rgba(0,0,0,0.12);
+
+$backgroudColorTitulo: #E6E8EB; //rgb(249,249,252);
+
+$active: #46a546;
+
+$inactive:#e00300;
+
+$draft:#f89406;
+
+$scheduled:#049cdb;
+
+$selecionado: #fff;
+
+@mixin border-radius() {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+          border-radius: 2px;
+}
+
+@mixin border-top-radios() {
+	 -webkit-border-radius: 2px 2px 0px 0px;
+     -moz-border-radius: 2px 2px 0px 0px;
+      -ms-border-radius: 2px 2px 0px 0px;
+          border-radius: 2px 2px 0px 0px;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif, serif;
+	font-weight: 400; 
+	font-style: normal;
+}
+
+body {
+
+	/*background-color: #4285F4;*/
+	/*background-color: #55ACEE;*/
+	/*background-color: #55ACEE;*/
+
+}
+
+/*Container*/
+.container{
+	position: relative;
+	margin: auto auto;
+}
+.content {
+	width:80%;
+	max-width:980px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.error {
+	background-color: blue;
+	color:#000;
+}
+/*Container*/
+
+
+
+@import "janela.scss";
+
+@import "card.scss";
+
+@import "campos.scss";
+
+@import "tabela.scss";
+
+@import "dialogo.scss";
+
+@import "select.scss";
+
+@import "progresso.scss";
+
+@import "grid.scss";
+
+@import "help.scss";

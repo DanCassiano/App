@@ -1,0 +1,133 @@
+
+/*Cards*/
+.card {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 1px;
+	
+	&.card-padrao {
+		background-color: #fff;
+		border-radius: 1px;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+		margin-left:5px;
+		margin-right: 5px;
+	}
+
+	&.card-block {
+		display: inline-block;
+
+		.row {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+
+	&.card-menu {
+		/*padding: 0px 10px;*/
+		border: 1px solid #e0e0e0;
+		background-color: #FEFFFE;
+
+		.menu li {
+			padding: 10px 5px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		
+				a {
+					color: #000;
+					text-decoration: none;
+					padding: 7px 12px;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+				}
+		}
+	}
+
+	.card-opcoes {
+		display: none;
+		background-color: #fff;
+		border: 1px solid #e0e0e0;
+		border: none;
+		border-radius: 1px;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
+	
+		a {
+			text-decoration: none;
+			color: #000;
+			padding: 5px 10px;
+			display: inline-block;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		hr {
+			margin-left: -5px;
+			margin-right: -5px;
+			border:1px solid #e0e0e0;
+			border-bottom: none;
+		}
+	}
+
+
+	header,
+	.titulo {
+		background-color: $backgroudColorTitulo;
+		display: inline-block;
+		width: 100%;
+		padding: 6px 12px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #e0e0e0;
+		line-height: 28px;
+		text-align: left;
+		left: 0;
+		right: 0;
+
+		.controle {
+			display: inline-block;
+			padding-right: 5px;
+			padding-left: 5px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin-right: 5px;
+			margin-left: 5px;
+			vertical-align: middle;
+
+			&.left {
+				float: left;
+			}
+
+			&.right {
+				float: right;
+			}
+		}
+
+		&.plus2 {
+			font-size: 2em;
+		}
+
+	}
+
+	header a,
+	.titulo a{
+		text-decoration: none;
+		color: #000;
+	}
+
+	
+	.corpo {
+		padding: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	
+}
+/*Cards*/
