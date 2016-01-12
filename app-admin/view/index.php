@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?php echo $app->titulo ?></title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="<?php echo URL_BASE ?>/app-admin/assets/css/app.css">
 	<?php $app->getCSS(); ?>
 </head>
 <body>
