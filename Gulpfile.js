@@ -27,7 +27,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['app-admin/assets/css/*.css','app-admin/view/index.php','app-admin/modulos/**/*.php'],
+    browserSync.init(['app-admin/assets/css/*.css','app-admin/view/*.php','app-admin/modulos/**/*.php'],
     {
         proxy: "http://localhost/app/app-admin"
     });
