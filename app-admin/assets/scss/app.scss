@@ -15,6 +15,8 @@ $scheduled:#049cdb;
 
 $selecionado: #fff;
 
+$iconeZise: 1.5em;
+
 @mixin border-radius() {
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
@@ -29,6 +31,12 @@ $selecionado: #fff;
           border-radius: 2px 2px 0px 0px;
 }
 
+@mixin border-box() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+} 
+
 
 * {
 	margin: 0;
@@ -41,10 +49,11 @@ $selecionado: #fff;
 
 body {
 
-	/*background-color: #4285F4;*/
+	// background-color: #4285F4;
+	// background-color: #55ACEE;
+	// background-color: #101C27;
+	background-color: #1D2F3F;
 	/*background-color: #55ACEE;*/
-	/*background-color: #55ACEE;*/
-
 }
 
 /*Container*/
@@ -58,6 +67,10 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 
+	&.fluido {
+		width: 100%;
+	}
+
 }
 
 .error {
@@ -66,22 +79,37 @@ body {
 }
 /*Container*/
 
+.icone {
+	color: #fff;
+	&.icone-x2 {
+		font-size: $iconeZise*1;
+	}
+	
+	&.icone-x3 {
+		font-size: $iconeZise*2;
+	}
 
+	&.icone-x4 {
+		font-size: $iconeZise*4;
+	}
+}
 
-@import "janela.scss";
+@import "janela";
 
-@import "card.scss";
+@import "card";
 
-@import "campos.scss";
+@import "campos";
 
-@import "tabela.scss";
+@import "tabela";
 
-@import "dialogo.scss";
+@import "dialogo";
 
-@import "select.scss";
+@import "select";
 
-@import "progresso.scss";
+@import "progresso";
 
-@import "grid.scss";
+@import "grid";
 
-@import "help.scss";
+@import "nav-bar";
+
+@import "help";
