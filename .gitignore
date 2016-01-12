@@ -1,3 +1,4 @@
 node_modules
 app-admin/assets/scss/.sass-cache
 app-admin/assets/css/app.css
+app-admin/upload/.htaccess
