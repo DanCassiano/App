@@ -1,0 +1,13 @@
+
+.nav {
+	margin-left: 0;
+	margin-right: 0;
+	min-height: 20px;
+	padding: 5px 10px 2px 10px;
+	@include border-box();
+
+
+	&.nav-padrao {
+		// background-color:blue;
+	}
+}
