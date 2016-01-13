@@ -38,6 +38,13 @@ $iconeZise: 1.5em;
 } 
 
 
+@mixin animate( $quem, $tempo, $tipo ) {
+	-webkit-transition: $quem $tempo $tipo;
+	-o-transition: $quem $tempo $tipo;
+	transition: $quem $tempo $tipo;
+}
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -94,6 +101,14 @@ body {
 	}
 }
 
+.card-popover {
+	.icone {
+		color: #000;
+	}
+}
+
+@import "help";
+
 @import "janela";
 
 @import "card";
@@ -112,4 +127,4 @@ body {
 
 @import "nav-bar";
 
-@import "help";
+@import "lista";

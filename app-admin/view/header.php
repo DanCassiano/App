@@ -1,8 +1,26 @@
 <div class="nav nav-padrao">
 	<!-- Menu -->
-	<a href="#menu" class="trigger-menu">
-		<i class="fa fa-cube icone icone-x2"></i>
-	</a>
+	<div ng-controller="menuController" class="card card-nav-menu" >
+		<a href="#menu" class="trigger-menu" ng-click="clickMenu( $event );" >
+			<i class="fa fa-bars icone icone-x2"></i>
+		</a>
+		<div class="card card-popover {{ aberto == false ? 'hide' : 'show' }}" >
+			<div class="caret-top"></div>
+			<header>
+				<a href="#menu" class="trigger-menu" ng-click="clickMenu( $event );" >
+					<i class="fa fa-rocket icone icone-x2"></i>
+				</a>
+			</header>
+			<div class="corpo">
+				<ul class="lista">
+					<li ng-repeat="menu in menus">
+						<a href="app/app-admin/{{menu}}">{{menu}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
 	<!-- Menu -->
 
 	
@@ -25,3 +43,5 @@
 	<!-- Card usuario -->
 
 </div>
+
+

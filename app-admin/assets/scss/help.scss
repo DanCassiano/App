@@ -71,3 +71,26 @@
 		float: right;
 	}
 }
+
+.hide {
+	display:none !important;
+}
+
+.show {
+	display:block !important;
+}
+
+.caret-top {
+	border-color: transparent;
+	border-bottom-color: #fff;
+	border-style: dashed dashed solid;
+	border-width: 0 8.5px 8.5px;
+	position: absolute;
+	left: 15px;
+	top: 37px;
+	z-index: 1;
+	height: 0;
+	width: 0;
+	-webkit-animation: gb__a .2s;
+	animation: gb__a .2s;
+}
