@@ -29,21 +29,20 @@
 			self::$app_root = $app_root;
 		}
 
+		private static function normalizeDir( $dir ){
+			return str_replace(array("\\"), "/", $dir );
+		}
+
 		/** Funcao para registro do autoload */
 		public  static function registerLoad( $class ) {
-			
-			$class = explode("\\",$class);
 
-			$class = end($class);
+			$class = strtolower(preg_replace('/(?|([a-z\d])([A-Z]))/', '$1_$2', str_replace( "\\", "/", $class )));
+			$file = self::$app_root."/".$class. '.class.php';
+			$file = self::normalizeDir( $file );
 
-			foreach(self::$diretorios as $dir) { 
-				$class = strtolower(preg_replace('/(?|([a-z\d])([A-Z])|([^\^])([A-Z][a-z]))/', '$1_$2', $class)); 
-				$file = self::$app_root."/".$dir.'/'.$class. '.class.php';
-
-				if (file_exists($file)) {
-					require $file;
-					break; 
-				}
+			if (file_exists($file)) {
+				require $file;
 			}
+			
 		}
 	}
