@@ -94,3 +94,20 @@
 	-webkit-animation: gb__a .2s;
 	animation: gb__a .2s;
 }
+
+.caret-right:before {
+	content: " ";
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	width: 0; 
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #fff;
+}
+
+.clear {
+	display: block;
+	clear:both;
+}

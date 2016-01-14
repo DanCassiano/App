@@ -7,3 +7,28 @@
 		margin-left:0;
 	}
 }
+
+.barra {
+
+	.row {
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	&.lateral {
+
+		&.fixa {
+			position: fixed;
+			top:0;
+			bottom:0;
+			background-color: rgba(0,0,0,.5);
+			&.left {
+				left: 0;
+			}
+
+			&.right {
+				right: 0;
+			}
+		}
+	}
+}

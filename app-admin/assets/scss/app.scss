@@ -70,7 +70,7 @@ body {
 }
 .content {
 	width:80%;
-	max-width:980px;
+	max-width:1200px;
 	margin-left:auto;
 	margin-right:auto;
 
@@ -80,6 +80,8 @@ body {
 
 }
 
+
+
 .error {
 	background-color: blue;
 	color:#000;
@@ -88,6 +90,18 @@ body {
 
 .icone {
 	color: #fff;
+	
+	&.menu {
+		display:inline-block;
+		padding:12px 8px;
+		@include border-box();
+		float:left;
+		// color:#000;
+		&.atual {
+			border-right:2px solid #fff;
+		}
+	}
+
 	&.icone-x2 {
 		font-size: $iconeZise*1;
 	}
@@ -98,6 +112,10 @@ body {
 
 	&.icone-x4 {
 		font-size: $iconeZise*4;
+	}
+
+	&.icone-invert {
+		color:#000;
 	}
 }
 
