@@ -22,7 +22,10 @@
 	define("HOST", "localhost");
 
 	/** Nome do Banco */
-	define("BD","app");
+	define("BANCO","app");
+
+	/** usuario do banco */
+	define("USUARIO", "root");
 
 	/** Senha de acesso do banco */
 	define("SENHA","");
