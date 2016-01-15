@@ -1,13 +1,12 @@
 <?php
-; @modulo paginas
+; @modulo package
 ; @autor Jordan de Sousa Cassiano
 ;
 /*
 [script]
-	pagina=paginas/js/paginas.js
+	package=package/js/package.js
 
-[css]
-	geral=paginas/css/paginas.css
+
 
 */
 ?>
