@@ -25,7 +25,7 @@
 		private $query;
 
 		/** @var string diretorio dos modulos */
-		private $dirModulos = "/app-admin/modulos/";
+		private $dirModulos = "/app-admin/packages/";
 
 		/**
 		 * Busca a interface
@@ -69,7 +69,7 @@
 			if( !empty( $this->action ) && $this->existe( $this->action ) ) {
 				
 				$app = $this;
-				require DIR_BASE . $this->dirModulos . $this->action."/{$this->action}.modulo.php";
+				require DIR_BASE . $this->dirModulos . $this->action."/{$this->action}.pack.php";
 			}
 			return $this;
 		}

@@ -61,7 +61,7 @@
 		</a>
 	</div>
 	<div class="row">
-		<a href="<?php echo URL_BASE ?>/app-admin/package" class="icone menu">
+		<a href="<?php echo URL_BASE ?>/app-admin/modulos" class="icone menu">
 			<i class="fa fa-archive icone icone-x2" title="Log" > </i>
 		</a>
 	</div>

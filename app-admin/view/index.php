@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="<?php echo URL_BASE ?>/app-admin/assets/css/app.css">
 	<?php $app->getCSS(); ?>
 	<base href="<?php echo URL_BASE ?>">
+	<style>
+		.content {
+			padding-top: 45px;
+		}
+	</style>
 </head>
 <body>
 	<div class="content fluido">
