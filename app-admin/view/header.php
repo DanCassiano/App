@@ -1,6 +1,6 @@
 <div class="nav nav-padrao">
 	<!-- Menu -->
-	<div ng-controller="menuController" class="card card-nav-menu" >
+	<!-- <div ng-controller="menuController" class="card card-nav-menu" >
 		<a href="#menu" class="trigger-menu" ng-click="clickMenu( $event );" >
 			<i class="fa fa-bars icone icone-x2"></i>
 		</a>
@@ -19,7 +19,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 	<!-- Menu -->
 
@@ -42,6 +42,29 @@
 	</div>
 	<!-- Card usuario -->
 
+</div>
+
+<div class="barra lateral fixa left">
+	<div class="row">
+		<a href="#icone" class="icone menu">
+			<i class="fa fa-rocket icone icone-x2" title="Rocket"></i>
+		</a>
+	</div>
+	<div class="row">
+		<a href="<?php echo URL_BASE ?>/app-admin/paginas" class="icone menu atual">
+			<i class="fa fa-clone icone icone-x2" title="Paginas" ></i>
+		</a>
+	</div>
+	<div class="row">
+		<a href="#icone" class="icone menu">
+			<i class="fa fa-user-secret icone icone-x2" title="Log" > </i>
+		</a>
+	</div>
+	<div class="row">
+		<a href="<?php echo URL_BASE ?>/app-admin/package" class="icone menu">
+			<i class="fa fa-archive icone icone-x2" title="Log" > </i>
+		</a>
+	</div>
 </div>
 
 
