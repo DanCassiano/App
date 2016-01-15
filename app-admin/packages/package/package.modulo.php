@@ -1,14 +1,7 @@
 
-<div class="janela janela-aba">
+<div class="janela " ng-controller="packageListController" >
 	<div class="titulo" >
-		<div class="aba caret-right">
-			Paginas
-		</div>
-		<a href="#nova" class="action">
-			<i class="fa fa-plus icone "></i>
-			Nova pagina
-		</a>
-		
+		Packages
 		<div class="controle right">
 			<div class="pull-right icones">
 				<a href="#config">
@@ -16,7 +9,7 @@
 				</a>
 			</div>
 			<div class="pull-right">
-				<input type="text" value="" placeholder="Buscar..">
+				<input type="text" value="" placeholder="Buscar.." ng-model="filtraPack" >
 			</div>
 			
 		</div>
@@ -28,23 +21,17 @@
 					<th class="t-small">
 						<input type="checkbox">
 					</th>
-					<th class="t-large" >Pagina(s)</th>
-					<th class="t-medium">Autor</th>
-					<th class="t-medium">Alterada em:</th>
+					<th class="t-medium" >Package</th>
+					<th class="t-large">Sobre</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>home</td>
-					<td>13-01-2016</td>
-					<td>Jordan</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>Contato</td>
-					<td>13-01-2016</td>
-					<td>Jordan</td>
+				<tr ng-repeat="pack in packages | filter:filtraPack | orderBy:'package'" >
+					<td>
+						<input type="checkbox" value="{{pack.id}}">
+					</td>
+					<td>{{pack.package}}</td>
+					<td></td>
 				</tr>
 			</tbody>
 		</table>
