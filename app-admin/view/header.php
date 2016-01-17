@@ -50,19 +50,10 @@
 			<i class="fa fa-rocket icone icone-x2" title="Rocket"></i>
 		</a>
 	</div>
+	<?php montaMenu( $app->action ); ?>
 	<div class="row">
-		<a href="<?php echo URL_BASE ?>/app-admin/paginas" class="icone menu atual">
-			<i class="fa fa-clone icone icone-x2" title="Paginas" ></i>
-		</a>
-	</div>
-	<div class="row">
-		<a href="#icone" class="icone menu">
-			<i class="fa fa-user-secret icone icone-x2" title="Log" > </i>
-		</a>
-	</div>
-	<div class="row">
-		<a href="<?php echo URL_BASE ?>/app-admin/modulos" class="icone menu">
-			<i class="fa fa-archive icone icone-x2" title="Log" > </i>
+		<a href="<?php echo URL_BASE ?>/app-admin/config" class="icone menu <?php echo( $app->action == 'config' ? "atual" : "") ?>">
+			<i class="fa fa-fort-awesome icone icone-x2" title="Rocket"></i>
 		</a>
 	</div>
 </div>
