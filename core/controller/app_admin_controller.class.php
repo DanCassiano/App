@@ -144,11 +144,13 @@
 		}
 
 		private function getHeader() {
+			$app = $this;
 			require DIR_BASE."/app-admin/view/header.php";
 			return $this;
 		}
 
 		private function getFooter() {
+			$app = $this;
 			require DIR_BASE."/app-admin/view/footer.php";
 			return $this;
 		}
