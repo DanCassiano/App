@@ -1,5 +1,5 @@
 
-angular.module("App", []);
+angular.module("App", ['ui.calendar']);
 angular
 	.module("App")
 		.controller("dropController", function($scope) {
