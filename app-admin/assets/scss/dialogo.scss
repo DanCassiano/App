@@ -9,7 +9,18 @@
 	top: 10%;
 	left: 5%;
 	right: 5%;
+	height: 80%;
+
 	
+	&.padrao {
+		background-color:#fff;
+	}
+	
+	.corpo {
+		padding: 10px;
+		@include border-box();
+	}
+
 	.rodape {
 		padding:10px 12px;
 		-webkit-box-sizing: border-box;
@@ -17,7 +28,29 @@
 		box-sizing: border-box;
 		margin-left: 0;
 		margin-right: 0;
+		position: absolute;
+		bottom:0;
+		width: 100%;
+		background-color: $backgroudColorTitulo;
+		border-top: 1px solid #e0e0e0;
 	}
+
+	
+	.titulo {
+		background-color: $backgroudColorTitulo;
+		width: 100%;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		/*border-bottom: 1px solid rgba( 246, 246, 251, .7);*/
+		border-bottom: 1px solid #e0e0e0;
+		display: inline-block;
+		line-height: 24px;
+		text-align: left;
+		position: relative;
+		@include border-top-radios();
+		height: 38px;
+	}
+
 }
 
 .mascara-dialog {
