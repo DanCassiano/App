@@ -24,8 +24,10 @@
 				->getFooter();
 		 ?>
 	</div>
+	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/lib/jquery-1.12.0.min.js"></script>
 	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/lib/angular.min.js"></script>
 	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/app.js"></script>
 	<?php $app->getScripts() ?>
+	<div class="mascara-dialog"></div>
 </body>
 </html>
