@@ -4,7 +4,7 @@
 	/**
 	* MyPDO
 	*/
-	class MyPdo
+	class Pdo
 	{
 		private $conn;
 
@@ -13,17 +13,17 @@
 		function __construct( ) {
 
 			$dsn = 'mysql:host=' . HOST . ';dbname=' . BANCO;
-			$opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
+			$opcoes = array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 			if (empty($this->conn)) {
 				
 				try {
 				
-					$this->conn = new PDO($dsn, USUARIO, SENHA, $opcoes);
-					$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$this->conn = new \PDO($dsn, USUARIO, SENHA, $opcoes);
+					$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 				
-				} catch (PDOException $e) {
+				} catch (\PDOException $e) {
 					
-					header("Location: ".URL_DIR."/instal");
+					var_dump( $e );
 				}
 			}
 		}
@@ -41,7 +41,7 @@
 			return false;
 		}
 
-		public function getResult( $mode = PDO::FETCH_ASSOC ) {
+		public function getResult( $mode = \PDO::FETCH_ASSOC ) {
 			return $this->query->fetchAll( $mode );
 		}
 
@@ -66,7 +66,7 @@
 				$db->execute();
 
 			}
-			catch(PDOException $e){
+			catch(\PDOException $e){
 				return false;
 			}
 			$this->query = $db;
@@ -90,9 +90,9 @@
 					$id 	= $this->conn->lastInsertId();
 					$this->conn->commit();
 				}
-				catch(PDOException $e) {
+				catch(\PDOException $e) {
 					$this->conn->rollback();
-					var_dump($e->getMessage());
+					// var_dump($e->getMessage());
 				}
 			return $id;
 		}
@@ -118,7 +118,7 @@
 		function __destruct() {
 			try {
 				$this->conn = null;
-			} catch (PDOException $e) {
+			} catch (\PDOException $e) {
 				die($e->getMessage());
 			}
 		}
