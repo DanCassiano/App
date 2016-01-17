@@ -6,14 +6,15 @@
 	/** classe de autoload */
 	require "help/auto_load.class.php";
 
-	use \Core,
-		\Core\Controller,
-		\Core\Help;
+	use Core\Controller\Controller,
+		Core\Help\AutoLoad;
 
 	// Definindo caminho root para o autoload
-	Core\Help\AutoLoad::setRootDir( DIR_BASE );
+	AutoLoad::setRootDir( DIR_BASE );
 	// Registrando o auto load
 	spl_autoload_register( array( 'Core\Help\AutoLoad', 'registerLoad' ) );
 
-	$front = new Core\Controller\Controller();
+	require DIR_BASE."/app-include/app-menu.php";
+
+	$front = new Controller();
 	$front->run();
