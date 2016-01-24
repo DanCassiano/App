@@ -31,12 +31,15 @@
 		<a href="#usuario" title="Usuario" ng-click="logChange( $event ); $event.preventDefault()">
 			<img src="<?php echo URL_BASE ?>/app-admin/upload/user.png" width=40 alt="usuario">
 		</a>
-
+		<?php 
+			$user = new \Core\Usuario\Usuario();
+			$d =$user->getUserLogado( _s("id") );
+		?>
 		<div class="card card-opcoes ng-hide" ng-hide="aberto" >
 			<div class="corpo">
-				<a href="#asdasd">Jordan</a>
+				<a href="#asdasd"><?php echo $d['login'] ?></a>
 				<hr>
-				<a href="<?php echo URL_BASE ?>/app-admin/user/logoff/">Sair</a>
+				<a href="javascript:void()" ng-click="logoff(<?php echo $d['id'] ?>)">Sair</a>
 			</div>
 		</div>
 	</div>
@@ -54,6 +57,13 @@
 	<div class="row">
 		<a href="<?php echo URL_BASE ?>/app-admin/config" class="icone menu <?php echo( $app->action == 'config' ? "atual" : "") ?>">
 			<i class="fa fa-fort-awesome icone icone-x2" title="Rocket"></i>
+			<ul class="menu iten-hover lista">
+				<li>ADD</li>
+				<li>ADD</li>
+				<li>ADD</li>
+				<li>ADD</li>
+				<li>ADD</li>
+			</ul>
 		</a>
 	</div>
 </div>

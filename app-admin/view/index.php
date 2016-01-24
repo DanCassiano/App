@@ -7,6 +7,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo URL_BASE ?>/app-admin/assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo URL_BASE ?>/app-admin/assets/css/app.css">
+	<link rel="stylesheet" href="<?php echo URL_BASE ?>/app-admin/assets/css/normalize.css">
 	<?php $app->getCSS(); ?>
 	<base href="<?php echo URL_BASE ?>">
 	<style>
@@ -17,6 +18,7 @@
 </head>
 <body>
 	<div class="content fluido">
+
 		<?php 
 			$app
 				->getHeader()
@@ -24,8 +26,8 @@
 				->getFooter();
 		 ?>
 	</div>
-	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/lib/jquery-1.12.0.min.js"></script>
 	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/lib/angular.min.js"></script>
+	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/lib/jquery-1.12.0.min.js"></script>
 	<script src="<?php echo URL_BASE ?>/app-admin/assets/js/app.js"></script>
 	<?php $app->getScripts() ?>
 	<div class="mascara-dialog"></div>
