@@ -35,13 +35,15 @@
 		 */
 		public function render( $action, $parametros, $query){
 			
-			$s = new \Core\Session();
-			$s->start();
 			$this->titulo 		= "App-Admin";
 			$this->action 		= $action;
 			$this->parametros 	= $parametros;
 			$this->query 		= $query;
-			$this->getDashBoard();
+
+			if( $this->isLogin() )
+				$this->getDashBoard();
+			else
+				$this->getLogin();
 		}
 
 		/**
@@ -155,8 +157,12 @@
 			return $this;
 		}
 
+		private function getLogin(){
+			require DIR_BASE."/app-admin/view/login.php";
+		}
+
 		private function isLogin() {
-			return $this;
+			return isset($_SESSION['id']);
 		}
 
 	}
