@@ -125,6 +125,28 @@ body {
 	}
 }
 
+.menu { 
+	position: relative;
+	
+	&:hover {
+		.iten-hover {
+			transition: all .3s ease-in-out;
+			margin-left: 35px;
+		}
+	}
+
+	&.iten-hover {
+		position: absolute;
+		top:10px;
+		transition: all .3s ease-in-out;
+		margin-left: -200px;
+		padding:5px 10px;
+		background-color:rgba(0,0,0,.3);
+		@include  border-radius();
+		z-index: 999999999999999;
+	}
+}
+
 @import "help";
 
 @import "janela";

@@ -22,6 +22,7 @@
 			top:0;
 			bottom:0;
 			background-color: rgba(0,0,0,.5);
+			z-index: 999999999;
 			&.left {
 				left: 0;
 			}
@@ -29,6 +30,19 @@
 			&.right {
 				right: 0;
 			}
+		}
+	}
+}
+
+.paginacao {
+	display:table;
+	li {
+		list-style: none;
+		display:inline-block;
+
+		&.atual a {
+			background-color: $active;
+			color:#fff;
 		}
 	}
 }
