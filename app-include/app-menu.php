@@ -31,7 +31,8 @@
 				?>
 				<div class="row">
 					<a href="<?php echo URL_BASE ?>/app-admin/<?php echo $menu['package'] ?>" class="icone menu <?php echo $classe ?>">
-						<i class="fa <?php echo $iconesPackages[ $menu['id'] ] ?> icone icone-x2" title="" > </i>
+						<i class="fa <?php echo $iconesPackages[ $menu['id'] ] ?> icone icone-x2" title="" ></i>
+						<span class="menu iten-hover"><?php echo $menu['package'] ?></span>
 					</a>
 				</div>
 				<?php
