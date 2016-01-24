@@ -1,5 +1,6 @@
 <?php 
 	
+	
 	if( defined("DEBUG") && DEBUG == true ) 
 		ini_set('display_errors', 1);
 
@@ -15,6 +16,8 @@
 	spl_autoload_register( array( 'Core\Help\AutoLoad', 'registerLoad' ) );
 
 	require DIR_BASE."/app-include/app-menu.php";
+
+	require DIR_BASE."/app-include/app-functions.php";
 
 	$front = new Controller();
 	$front->run();
