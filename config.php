@@ -1,4 +1,5 @@
 <?php 
+	if(!isset($_SESSION)) { session_start(); } 
 	
 	/** Caminho base para src em geral */
 	define("URL_BASE", "http://localhost/app");
