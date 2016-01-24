@@ -6,8 +6,8 @@ angular
 
 function packageListController( $scope, packageService ) {
 	function success(obj){
-		console.log('Data: ', obj);
-		$scope.packages = obj.data;
+		// console.log('Data: ', obj);
+		// $scope.packages = obj.data;
 	}
 	function error(err){
 		console.log('Erro: ', err);
